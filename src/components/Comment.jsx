@@ -42,7 +42,7 @@ const Comment = ({
   const [EditMessage, setEditMessage] = useState(message);
   const [newReply, setNewReply] = useState({
     id: "",
-    content: "@" + userName + ", ",
+    content: "",
     createdAt: "",
     score: 0,
     user: data.currentUser,
@@ -217,6 +217,10 @@ const Comment = ({
                   onClick={() => {
                     setMessageId(commentID);
                     setIsReplyToComment(true);
+                    setNewReply({
+                      ...newReply,
+                      content: "@" + userName + ", ",
+                    });
                   }}
                   className="flex cursor-pointer items-center gap-1 text-[#4a4d9c] text-[14px] font-semibold"
                 >
