@@ -277,24 +277,26 @@ const Comment = ({
           >
             <form
               onSubmit={onSubmit}
-              className="flex bg-white px-4 py-4 mt-4 shadow-sm rounded-md gap-3"
+              className="flex flex-wrap bg-white px-4 py-4 mt-4 shadow-sm rounded-md gap-3"
             >
-              <img
-                className="w-10 h-10 rounded-full"
-                src={data.currentUser.image.png}
-                alt="Rounded avatar"
-              />
-              <input
-                type="text"
-                id="default-input"
-                name="content"
-                onChange={handleChange}
-                value={newReply.content}
-                placeholder="Write your comment..."
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"
-              />
+              <div className="flex w-full gap-3">
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src={data.currentUser.image.png}
+                  alt="Rounded avatar"
+                />
+                <input
+                  type="text"
+                  id="default-input"
+                  name="content"
+                  onChange={handleChange}
+                  value={newReply.content}
+                  placeholder="Write your comment..."
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"
+                />
+              </div>
 
-              <div className="flex gap-2">
+              <div className="flex gap-2 w-full justify-end">
                 <button
                   type="submit"
                   className="text-white px-6 py-3 bg-[#5357b7] hover:bg-[#3a3eb1] focus:outline-none font-medium rounded text-sm p-2.5 text-center"
